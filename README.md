@@ -1,10 +1,22 @@
 # automaty
+##Includes:
 
 Cucumber tests
+
 Cucumber reporting
 
-tbd:
-allure reports
 selenium test
+
+
+## TODO:
+more complex selenium test
+
+page-object in a separate project
+
+nexus-like repo
+
+allure reports
+
 some grid?
-jenkins
+
+jenkins with selenium worker
