@@ -20,3 +20,5 @@ allure reports
 some grid?
 
 jenkins with selenium worker
+
+play around with dockerizing
