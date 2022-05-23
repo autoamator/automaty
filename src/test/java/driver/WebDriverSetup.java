@@ -1,10 +1,8 @@
 package driver;
 
-import org.openqa.selenium.WebDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.concurrent.TimeUnit;
 
 public class WebDriverSetup {
 
@@ -13,7 +11,10 @@ public class WebDriverSetup {
         WebDriverManager.chromedriver().setup();
         driver = WebDriverManager.chromedriver()
                 .capabilities(getChromeOptions())
-                .remoteAddress("http://localhost:4444/wd/hub").create(); //using local selenium server
+//                .remoteAddress("http://localhost:4444/wd/hub") //using local selenium server
+                .browserInDocker()
+                .enableVnc().enableRecording()
+                .create();
         return driver;
     }
 
