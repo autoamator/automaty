@@ -10,7 +10,7 @@ public class General {
     public void goToPage(String url) throws InterruptedException {
         org.openqa.selenium.WebDriver driver = webDriver.getWebdriver();
         driver.get(url);
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(3);
         driver.quit();
     }
 }
