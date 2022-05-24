@@ -7,6 +7,10 @@ Cucumber reporting
 
 selenium test
 
+built-in browser via WebDriverManager
+
+logs via Logback
+
 
 ## TODO:
 more complex selenium test
