@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 
 public class GoogleMain extends General{
 
-    WebElement agreeButton = webDriver.getWebdriver().findElement(By.id("L2AGLb"));
-    WebElement searchButton = webDriver.getWebdriver().findElement(By.name("btnK"));
-    WebElement searchBox = webDriver.getWebdriver().findElement(By.name("q"));
+    WebElement agreeButton = driver.findElement(By.xpath("//button[@id='L2AGLb']"));
+    WebElement searchButton = driver.findElement(By.name("btnK"));
+    WebElement searchBox = driver.findElement(By.name("q"));
 
     public void searchForSomething(String text){
         enterSearchTerm(text);

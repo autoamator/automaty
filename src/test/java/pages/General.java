@@ -1,15 +1,13 @@
 package pages;
 
 import driver.WebDriverSetup;
-
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
 
 public class General {
 
-    public WebDriverSetup webDriver = new WebDriverSetup();
+    public static WebDriver driver = new WebDriverSetup().getWebdriver();
     public void goToPage(String url) throws InterruptedException {
-        org.openqa.selenium.WebDriver driver = webDriver.getWebdriver();
         driver.get(url);
-        TimeUnit.SECONDS.sleep(10);
+//        TimeUnit.SECONDS.sleep(10);
     }
 }
