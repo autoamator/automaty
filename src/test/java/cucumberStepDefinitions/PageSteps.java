@@ -1,9 +1,7 @@
 package cucumberStepDefinitions;
 
 import io.cucumber.java.en.Given;
-import org.openqa.selenium.support.PageFactory;
 import pages.General;
-import pages.GoogleMain;
 
 public class PageSteps {
 
@@ -16,8 +14,8 @@ public class PageSteps {
 
     @Given("I close the disclaimer")
     public void iCloseTheDisclaimer(){
-        GoogleMain googleMain = PageFactory.initElements(general.webDriver.getWebdriver(), GoogleMain.class);
-        googleMain.agreeToTerms();
+//        GoogleMain googleMain = PageFactory.initElements(general.webDriver.getWebdriver(), GoogleMain.class);
+//        googleMain.agreeToTerms();
 
     }
 
