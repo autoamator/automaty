@@ -9,7 +9,5 @@ Feature: Is it Friday yet?
   Scenario: Some web test
     Given I open google page
     And I close the disclaimer
-#    And I search for the term kiszka
-    And today is Sunday
-    When I ask whether it's Friday yet
-    Then I should be told "Nope"
+    When I search for the term "kiszka"
+    Then I see the result "kiszka ziemniaczana" in result page
