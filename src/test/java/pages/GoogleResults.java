@@ -10,12 +10,12 @@ public class GoogleResults extends General{
     @FindBy(xpath = "//a[h3[text()='Kiszka ziemniaczana – Wikipedia, wolna encyklopedia'] and ancestor::div[@data-sokoban-container]]")
     private WebElement searchResultKiszka;
 
-    @FindBy(xpath = "//a[@title='Przejdź do strony głównej Google']")
-    private WebElement logo;
+        @FindBy(xpath = "//a[@title='Przejdź do strony głównej Google']")
+        private WebElement logo;
 
-    public GoogleResults (){
-        PageFactory.initElements(driver, this);
-    }
+        public GoogleResults (){
+            PageFactory.initElements(driver, this);
+        }
 
     public void openSearchResultKiszka(){
         searchResultKiszka.click();

@@ -10,4 +10,6 @@ Feature: Is it Friday yet?
     Given I open google page
     And I close the disclaimer
     When I search for the term "kiszka"
-    Then I see the result "kiszka ziemniaczana" in result page
+    Then I see the proper result in result page
+    And I click the result
+    And proper page opens

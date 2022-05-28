@@ -6,6 +6,7 @@ import io.cucumber.java.en.When;
 import pages.General;
 import pages.GoogleMain;
 import pages.GoogleResults;
+import pages.Wiki;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -32,10 +33,22 @@ public class PageSteps {
         googleMain.searchForSomething(text);
     }
 
-    @Then("I see the result {string} in result page")
-    public void i_see_the_result_in_result_page(String string) {
+    @Then("I see the proper result in result page")
+    public void i_see_the_result_in_result_page() {
         GoogleResults googleResults= new GoogleResults();
         assertThat(googleResults.isKiszkaZiemniaczanaVisibleInResults()).isTrue();
+    }
+
+    @Then("I click the result")
+    public void i_click_the_result() {
+        GoogleResults googleResults= new GoogleResults();
+        googleResults.openSearchResultKiszka();
+    }
+    @Then("proper page opens")
+    public void proper_page_opens() {
+        Wiki wiki = new Wiki();
+        assertThat(wiki.isWikiPageOpened()).isTrue();
+        assertThat(wiki.isProperContentDisplayed()).isTrue();
     }
 
 }
