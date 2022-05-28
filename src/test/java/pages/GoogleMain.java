@@ -2,12 +2,16 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class GoogleMain extends General{
 
-    WebElement agreeButton = driver.findElement(By.xpath("//button[@id='L2AGLb']"));
-    WebElement searchButton = driver.findElement(By.name("btnK"));
-    WebElement searchBox = driver.findElement(By.name("q"));
+    @FindBy(xpath = "//button[@id='L2AGLb']")
+    private WebElement agreeButton;
+    @FindBy(name ="btnK")
+    private WebElement searchButton;
+    @FindBy(name = "q")
+    private WebElement searchBox;
 
     public void searchForSomething(String text){
         enterSearchTerm(text);
@@ -22,6 +26,7 @@ public class GoogleMain extends General{
     }
 
     public void agreeToTerms(){
+        driver.getPageSource();
         agreeButton.click();
     }
 
