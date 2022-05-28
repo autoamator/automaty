@@ -7,7 +7,7 @@ import pages.General;
 import pages.GoogleMain;
 import pages.GoogleResults;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 
 public class PageSteps {
