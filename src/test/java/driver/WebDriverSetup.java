@@ -14,7 +14,7 @@ public class WebDriverSetup {
         WebDriverManager wdm = WebDriverManager.chromedriver()
                 .capabilities(getChromeOptions())
                 .browserInDocker()
-                .enableVnc().enableRecording();
+                .enableVnc();
         driver = wdm.create();
         logger.info("Docker VNC url: " + wdm.getDockerNoVncUrl());
         return driver;
