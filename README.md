@@ -1,5 +1,5 @@
 # automaty
-##Includes:
+## Includes:
 
 Cucumber tests
 
@@ -11,15 +11,20 @@ built-in browser via WebDriverManager
 
 logs via Logback
 
+more complex selenium test
+
 
 ## TODO:
-more complex selenium test
+
+use @before
+
+allure reports
+
+screenshots and movies in the report
 
 page-object in a separate project
 
 nexus-like repo
-
-allure reports
 
 some grid?
 
