@@ -10,7 +10,7 @@ public class WebDriverSetup {
     private static final Logger logger = LoggerFactory.getLogger(WebDriverSetup.class);
     WebDriver driver;
 
-    public org.openqa.selenium.WebDriver getWebdriver(){
+    public WebDriver getWebdriver(){
         WebDriverManager wdm = WebDriverManager.chromedriver()
                 .capabilities(getChromeOptions())
                 .browserInDocker()
