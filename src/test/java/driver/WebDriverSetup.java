@@ -12,9 +12,10 @@ public class WebDriverSetup {
 
     public org.openqa.selenium.WebDriver getWebdriver(){
         WebDriverManager wdm = WebDriverManager.chromedriver()
-                .capabilities(getChromeOptions())
-                .browserInDocker()
-                .enableVnc();
+                .remoteAddress("http://localhost:4444")
+                .capabilities(getChromeOptions());
+//                .browserInDocker()
+//                .enableVnc();
         driver = wdm.create();
         logger.info("Docker VNC url: " + wdm.getDockerNoVncUrl());
         return driver;
@@ -23,6 +24,7 @@ public class WebDriverSetup {
     ChromeOptions getChromeOptions(){
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("start-maximized");
+        chromeOptions.addArguments("--remote-allow-origins=*");
         return chromeOptions;
     }
 }
